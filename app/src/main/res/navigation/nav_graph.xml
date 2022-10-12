@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentLogin">
+
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="ni.edu.uca.navgeraldineporras.FragmentLogin"
+        android:label="fragment_login2"
+        tools:layout="@layout/fragment_login2" >
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentMenuu"
+            app:destination="@id/fragmentMenuu" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentConvertir"
+        android:name="ni.edu.uca.navgeraldineporras.FragmentConvertir"
+        android:label="fragment_convertir"
+        tools:layout="@layout/fragment_convertir" />
+    <fragment
+        android:id="@+id/fragmentMenuu"
+        android:name="ni.edu.uca.navgeraldineporras.FragmentMenuu"
+        android:label="fragment_menuu"
+        tools:layout="@layout/fragment_menuu" >
+        <action
+            android:id="@+id/action_fragmentMenuu_to_fragmentConvertir"
+            app:destination="@id/fragmentConvertir" />
+    </fragment>
+
+
+</navigation>
